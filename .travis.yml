@@ -1,1 +1,16 @@
 language: haskell
+
+addons:
+  apt:
+    sources:
+      - ppa:hvr/ghc
+    packages:
+    - haskell
+
+script:
+  - cabal new-install site
+  - site build
+  - cat _site/index.html
+
+notifications:
+  email: false
