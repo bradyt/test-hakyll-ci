@@ -5,7 +5,8 @@ addons:
     sources:
       - ppa:hvr/ghc
     packages:
-    - haskell
+      - ghc
+      - cabal-install
 
 script:
   - cabal new-install site
